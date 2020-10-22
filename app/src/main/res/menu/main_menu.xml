@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_user_profile"
+            android:icon="@drawable/ic_user_profile"
+            android:title="Manage User Profile" />
+        <item
+            android:id="@+id/nav_manage_team"
+            android:icon="@drawable/ic_teams"
+            android:title="Manage Teams" />
+        <item
+            android:id="@+id/nav_invites"
+            android:icon="@drawable/ic_invite"
+            android:title="Invites" />
+
+    </group>
+
+    <item android:title="Logout &amp; Feedback"
+        android:id="@+id/title1">
+        <menu >
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/ic_feedback"
+                android:orderInCategory="100"
+                android:title="Feedback"
+                app:showAsAction="always" />
+
+
+            <item
+                android:id="@+id/nav_logout"
+                android:background="@drawable/l"
+                android:icon="@drawable/ic_logout"
+                android:orderInCategory="100"
+                android:textColor="#F44336"
+                android:title="Logout"
+                app:showAsAction="always" />
+
+        </menu>
+    </item>
+
+</menu>
+

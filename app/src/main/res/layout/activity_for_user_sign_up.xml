@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="Act.ForUserSignUp">
+
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bottom_corner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/quicksand_semibold"
+            android:text="Create New Account"
+            android:textColor="@color/white"
+            android:textSize="18dp"></TextView>
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout1">
+
+        <RadioGroup
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="80dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="0dp"
+                android:id="@+id/rbuser"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_button_left_selector"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:gravity="center"
+                android:text="User"
+                android:textColor="@color/white"
+                android:onClick="onRadioButtonClicked"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="0dp"
+                android:checked="false"
+                android:id="@+id/rborganizer"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="Organizer"
+                android:textColor="@color/red_color_almost"
+                android:background="@drawable/radio_button_right_selector"
+                android:onClick="onRadioButtonClicked"/>
+
+
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:text="Full Name"
+        android:textColor="@color/jaman_color"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <EditText
+        android:id="@+id/UserSignupfullname"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/custom_input_field"
+        android:elevation="2dp"
+        android:ems="10"
+        android:fontFamily="@font/quicksand_semibold"
+        android:hint="John Doe"
+
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="52dp"
+        android:paddingRight="52dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/prussianBlue"
+        android:textSize="14dp"
+
+        app:layout_constraintEnd_toEndOf="@+id/textView25"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView25"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:padding="4dp"
+        android:src="@drawable/ic_person_foreground"
+        android:tint="@color/ghost"
+        app:layout_constraintBottom_toBottomOf="@+id/UserSignupfullname"
+        app:layout_constraintEnd_toEndOf="@+id/UserSignupfullname"
+        app:layout_constraintTop_toTopOf="@+id/UserSignupfullname" />
+
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:text="Email"
+        android:textColor="@color/jaman_color"
+
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/UserSignupfullname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/UserSignupfullname"
+        app:layout_constraintTop_toBottomOf="@+id/UserSignupfullname" />
+
+    <EditText
+        android:id="@+id/usersignupemail"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/custom_input_field"
+        android:elevation="2dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:hint="eg:youremail@example.com"
+        android:inputType="textEmailAddress"
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="44dp"
+        android:paddingRight="44dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/prussianBlue"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/password_field"
+        app:layout_constraintEnd_toEndOf="@+id/textView26"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView26"
+        app:layout_constraintTop_toBottomOf="@+id/textView26"
+        app:layout_constraintVertical_bias="0.076" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="2dp"
+
+        android:padding="4dp"
+        android:src="@drawable/ic_mail2_foreground"
+        android:tint="@color/ghost"
+        app:layout_constraintBottom_toBottomOf="@+id/usersignupemail"
+        app:layout_constraintEnd_toEndOf="@+id/usersignupemail"
+        app:layout_constraintTop_toTopOf="@id/usersignupemail"
+        android:layout_marginRight="8dp" />
+
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:text="Password"
+        android:textColor="@color/jaman_color"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/usersignupemail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/usersignupemail"
+        app:layout_constraintTop_toBottomOf="@+id/usersignupemail" />
+
+    <EditText
+        android:id="@+id/usersignuppassword"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/custom_input_field"
+        android:elevation="2dp"
+        android:ems="10"
+        android:fontFamily="@font/quicksand_semibold"
+        android:hint="**********"
+        android:inputType="textPassword"
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="52dp"
+        android:paddingRight="52dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/prussianBlue"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView27"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView27"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <ImageView
+        android:id="@+id/image4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:padding="4dp"
+        android:src="@drawable/ic_lock2_foreground"
+        android:tint="@color/ghost"
+        app:layout_constraintBottom_toBottomOf="@+id/usersignuppassword"
+        app:layout_constraintEnd_toEndOf="@+id/usersignuppassword"
+        app:layout_constraintTop_toTopOf="@+id/usersignuppassword" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:text="Confirm Password"
+        android:textColor="@color/jaman_color"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/usersignuppassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/usersignuppassword"
+        app:layout_constraintTop_toBottomOf="@+id/usersignuppassword" />
+
+    <EditText
+        android:id="@+id/usersignupconfirmpassword"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/custom_input_field"
+        android:elevation="2dp"
+        android:ems="10"
+        android:fontFamily="@font/quicksand_semibold"
+        android:hint="**********"
+        android:inputType="textPassword"
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="52dp"
+        android:paddingRight="52dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/prussianBlue"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/usersignuptermsandcondition"
+        app:layout_constraintEnd_toEndOf="@+id/textView28"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <ImageView
+        android:id="@+id/image5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:padding="4dp"
+        android:src="@drawable/ic_lock2_foreground"
+        android:tint="@color/ghost"
+        app:layout_constraintBottom_toBottomOf="@+id/usersignupconfirmpassword"
+        app:layout_constraintEnd_toEndOf="@+id/usersignupconfirmpassword"
+        app:layout_constraintTop_toTopOf="@+id/usersignupconfirmpassword" />
+
+
+    <CheckBox
+        android:id="@+id/usersignuptermsandcondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:buttonTint="@color/red_color_almost"
+        android:fontFamily="@font/quicksand_semibold"
+        android:paddingStart="8dp"
+
+        android:paddingEnd="8dp"
+        android:text="Agree with Term &amp; Condions"
+
+        android:textColor="@color/jaman_color"
+        app:layout_constraintEnd_toEndOf="@+id/usersignupconfirmpassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/usersignupconfirmpassword"
+        app:layout_constraintTop_toBottomOf="@+id/usersignupconfirmpassword" />
+
+    <TextView
+        android:id="@+id/usercreateaccount"
+
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="@color/red_color_almost"
+        android:clickable="true"
+        android:fontFamily="@font/quicksand_semibold"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Create Acoount"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/usersignuptermsandcondition"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/usersignuptermsandcondition"
+        app:layout_constraintTop_toBottomOf="@+id/usersignuptermsandcondition" />
+
+
+    <TextView
+        android:id="@+id/textView29"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:text="Already Have An Account"
+        android:textColor="@color/jaman_color"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/usercreateaccount"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/usercreateaccount"
+        app:layout_constraintTop_toBottomOf="@+id/usercreateaccount" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="158dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
