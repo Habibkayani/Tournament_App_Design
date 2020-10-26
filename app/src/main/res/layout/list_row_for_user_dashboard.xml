@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/Tournamentimage"
              android:layout_marginTop="25dp"
             android:layout_width="60dp"
             android:layout_marginLeft="10dp"
@@ -37,6 +37,7 @@
             android:layout_width="180dp"
             android:layout_height="70dp">
             <TextView
+                android:id="@+id/tournamentlistname"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/quicksand_bold"
@@ -55,6 +56,7 @@
                 android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/tournamentlistdate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="80dp"
@@ -74,13 +76,14 @@
                 android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/tournamentlistprize"
                 android:textColor="@color/jaman_color"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="80dp"
                 android:layout_marginTop="45dp"
                 android:fontFamily="@font/quicksand_medium"
-                android:text="20000 Rs"
+                android:text="20000Rs"
                 android:textSize="12sp"></TextView>
 
         </RelativeLayout>
@@ -94,7 +97,7 @@
 
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/listviewdetailbutton"
                 android:layout_width="85dp"
                 android:layout_height="40dp"
 

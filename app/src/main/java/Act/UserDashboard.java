@@ -8,6 +8,7 @@ import androidx.appcompat.widget.AppCompatRadioButton;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,16 +30,17 @@ import com.google.android.material.tabs.TabLayout;
 import static com.example.tournament.R.color.red_color_almost;
 import static com.example.tournament.R.color.white;
 
-public class UserDashboard extends AppCompatActivity implements   NavigationView.OnNavigationItemSelectedListener {
+public class UserDashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle toggle;
     NavigationView navigationView;
     MenuItem item;
-    private Button b1,b2;
+    ViewPager pager;
+    private Button b1, b2;
     View view;
     TabLayout mTabLayout;
-    TabItem firstItem,secondItem,thirdItem;
+    TabItem Tournamentlist, TournamentCatagories;
     NaviagtionandTabPagerAdapter adapter;
 
     @Override
@@ -49,17 +51,20 @@ public class UserDashboard extends AppCompatActivity implements   NavigationView
         setSupportActionBar(toolbar);
 
 
-        b1=findViewById(R.id.userdashrbuser);
-        b2=findViewById(R.id.userdashrborganizer);
-     //   checkbox(view);
+//        b1=findViewById(R.id.userdashrbuser);
+//        b2=findViewById(R.id.userdashrborganizer);
+        //   checkbox(view);
+        pager = findViewById(R.id.request_orders_view_pager);
 
-        navigationView=findViewById(R.id.nav_view);
-       // mTabLayout = findViewById(R.id.tablayout1);
+        mTabLayout = findViewById(R.id.request_orders_tabs);
 
+        Tournamentlist = findViewById(R.id.firstItem);
+        TournamentCatagories = findViewById(R.id.secondItem);
+        navigationView = findViewById(R.id.nav_view);
+        // mTabLayout = findViewById(R.id.tablayout1);
 
 
         //////checkbox////
-
 
 
         ///////////////
@@ -67,27 +72,48 @@ public class UserDashboard extends AppCompatActivity implements   NavigationView
 
         Menu menu = navigationView.getMenu();
 
-        MenuItem tools= menu.findItem(R.id.title1);
+        MenuItem tools = menu.findItem(R.id.title1);
         SpannableString s = new SpannableString(tools.getTitle());
         s.setSpan(new TextAppearanceSpan(this, R.style.TextAppearance44), 0, s.length(), 0);
         tools.setTitle(s);
-       //////////////////////
+        //////////////////////
         navigationView.setNavigationItemSelectedListener(this);
 
-       item=findViewById(R.id.nav_logout);
+        item = findViewById(R.id.nav_logout);
 
-        drawerLayout=findViewById(R.id.drawer_layout);
+        drawerLayout = findViewById(R.id.drawer_layout);
         navigationView.setNavigationItemSelectedListener(this);
 
-        toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.setDrawerIndicatorEnabled(true);
         toggle.syncState();
+        adapter = new NaviagtionandTabPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, mTabLayout.getTabCount());
+        pager.setAdapter(adapter);
+        mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                pager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+        pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
 
 
+    }
 
-
-
+    private void addFragment() {
+        addFragment();
     }
 
 //  //  private void checkbox(View view) {
@@ -112,32 +138,31 @@ public class UserDashboard extends AppCompatActivity implements   NavigationView
 //    }
 
 
-    public void onRadioButtonClicked(View view) {
-
-            boolean isSelected = ((AppCompatRadioButton) view).isChecked();
-            switch ((view.getId())) {
-                case R.id.userdashrbuser:
-                    if (isSelected) {
-                        b1.setTextColor(getApplication().getResources().getColor(white));
-                        b2.setTextColor(getApplication().getResources().getColor(red_color_almost));
-                    }
-                    break;
-                case R.id.userdashrborganizer:
-                    if (isSelected) {
-                        b2.setTextColor(getApplication().getResources().getColor(white));
-                        b1.setTextColor(getApplication().getResources().getColor(red_color_almost));
-                    }
-                    break;
-
-            }
-        }
-
+//    public void onRadioButtonClicked(View view) {
+//
+//            boolean isSelected = ((AppCompatRadioButton) view).isChecked();
+//            switch ((view.getId())) {
+//                case R.id.userdashrbuser:
+//                    if (isSelected) {
+//                        b1.setTextColor(getApplication().getResources().getColor(white));
+//                        b2.setTextColor(getApplication().getResources().getColor(red_color_almost));
+//                    }
+//                    break;
+//                case R.id.userdashrborganizer:
+//                    if (isSelected) {
+//                        b2.setTextColor(getApplication().getResources().getColor(white));
+//                        b1.setTextColor(getApplication().getResources().getColor(red_color_almost));
+//                    }
+//                    break;
+//
+//            }
+//        }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.main_menu1,menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu1, menu);
         return true;
     }
 
@@ -163,10 +188,6 @@ public class UserDashboard extends AppCompatActivity implements   NavigationView
 //        drawerLayout.addDrawerListener(toggle);
 //        toggle.setDrawerIndicatorEnabled(true);
 //        toggle.syncState();
-
-
-
-
 
 
 }

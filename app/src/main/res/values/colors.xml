@@ -14,5 +14,7 @@
     <color name="dodgerBlue">#1C91EE</color>
     <color name="ghost">#CDD0D8</color>
     <color name="light">#FF0000</color>
+    <color name="white_gray">#dcd9d9</color>
+    <color name="colorPrimary1">@color/red_color_almost</color>
 
 </resources>

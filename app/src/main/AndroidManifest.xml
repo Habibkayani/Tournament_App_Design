@@ -9,17 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TOURNAMENT">
-        <activity android:name="Act.TournamentCatagories"></activity>
+        <activity android:name=".TeamDetail">  <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
+        <activity android:name="Act.Tournament_Detials">
+
+        </activity>
+        <activity
+            android:name="Act.Create_New_Tournament"
+            android:label="@string/title_activity_create__new__tournament"
+            android:theme="@style/Theme.TOURNAMENT.NoActionBar" />
+        <activity android:name="Act.TournamentCatagories" />
         <activity android:name="Act.UserDashboard" />
         <activity android:name="Act.ForUserSignUp" />
         <activity android:name="Act.LoginAct" />
-        <activity android:name="Act.Splash">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name="Act.Splash"></activity>
         <activity android:name="Act.MainActivity" />
     </application>
 

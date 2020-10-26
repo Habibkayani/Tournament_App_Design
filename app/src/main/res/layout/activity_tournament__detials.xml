@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Act.Tournament_Detials">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar22"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bottom_corner"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:title="Tournament Details"
+
+        app:titleMarginStart="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:src="@drawable/tournamentdetailimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar22" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Tournament Name"
+        android:textColor="@color/jaman_color"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="339dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <TextView
+            android:id="@+id/tournamentdetaildate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="182dp"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="20 August 2020"
+            android:layout_marginTop="1.8dp"
+            android:textColor="@color/jaman_color"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:fontFamily="@font/quicksand_semibold"
+            android:text="Started Form:"
+
+            android:textColor="@color/jaman_color"
+            android:textSize="12sp" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="339dp"
+        android:layout_height="30dp"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:fontFamily="@font/quicksand_semibold"
+            android:text="Rating:"
+            android:textColor="@color/jaman_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/Tournamentdetailrating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="132.5dp"
+            android:layout_marginTop="1.8dp"
+
+            android:fontFamily="@font/quicksand_medium"
+            android:text="5.0"
+            android:textColor="@color/jaman_color"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="155dp"
+            android:layout_marginTop="1.8dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="|"
+            android:textColor="@color/jaman_color"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="175dp"
+
+            android:fontFamily="@font/quicksand_semibold"
+            android:text="Organizer:"
+            android:textColor="@color/jaman_color"
+            android:textSize="12sp"></TextView>
+
+        <TextView
+            android:id="@+id/TournamentDetailOrganizer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="236.5dp"
+            android:layout_marginTop="1.8dp"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="Mr.xyz"
+            android:textColor="@color/jaman_color"
+            android:textSize="10sp"
+
+            />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout4"
+        android:layout_width="355dp"
+        android:layout_height="30dp"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:fontFamily="@font/quicksand_semibold"
+            android:text="Status:"
+            android:textColor="@color/jaman_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/TournamentdetailStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="73dp"
+
+            android:layout_marginTop="1.8dp"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="Ongoing"
+            android:textColor="@color/jaman_color"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="116dp"
+            android:layout_marginTop="1.8dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="|"
+            android:textColor="@color/jaman_color"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="122dp"
+            android:fontFamily="@font/quicksand_semibold"
+            android:text="Entry Fee:"
+            android:textColor="@color/jaman_color"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/Tournamentdetailentryfee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="1.8dp"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="500 Rs"
+            android:textColor="@color/jaman_color"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="215dp"
+            android:layout_marginTop="1.8dp"
+            android:fontFamily="@font/quicksand_semibold"
+            android:text="|"
+            android:textColor="@color/jaman_color"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220dp"
+            android:fontFamily="@font/quicksand_semibold"
+            android:text="Winner Prize:"
+            android:layout_marginTop="1.8dp"
+            android:textColor="@color/jaman_color"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/Tournamentdetailwinnerpriza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="284dp"
+            android:layout_marginTop="1.8dp"
+            android:fontFamily="@font/quicksand_semibold"
+            android:text="20000 Rs"
+            android:textColor="@color/jaman_color"
+            android:textSize="10sp" />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="339dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+
+        android:layout_marginRight="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout4">
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/ic_calenda" />
+
+        <TextView
+            android:id="@+id/tournamentdetailschedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/quicksand_semibold"
+            android:text="Tournament Schadule"
+            android:textColor="@color/jaman_color"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="180dp"
+            android:src="@drawable/ic_gallery" />
+
+        <TextView
+            android:id="@+id/tournamentdetailphotos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/quicksand_semibold"
+            android:text="Tournament Photos"
+            android:textColor="@color/jaman_color"
+            android:textSize="12sp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Current Participants"
+        android:textColor="@color/jaman_color"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout3" />
+
+    <FrameLayout
+
+
+        android:id="@+id/frameLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/aa" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="65dp"
+            android:src="@drawable/a" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="125dp"
+            android:src="@drawable/b" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="185dp"
+            android:src="@drawable/c" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="245dp"
+            android:src="@drawable/d" />
+
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:text="All Participants"
+        android:textColor="@color/red_color_almost"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout6" />
+
+    <Button
+        android:id="@+id/paticipantbtn"
+        android:layout_width="262dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="@color/red_color_almost"
+        android:fontFamily="@font/lato_regular"
+        android:text="Participate"
+
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout6" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Not Now"
+        android:fontFamily="@font/quicksand_bold"
+        android:textSize="12sp"
+        android:textColor="@color/jaman_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paticipantbtn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
