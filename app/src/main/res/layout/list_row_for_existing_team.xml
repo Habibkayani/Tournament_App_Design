@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/background"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="379dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/userdashboardlist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/Tournamentimage"
+             android:layout_marginTop="25dp"
+            android:layout_width="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="70dp"
+            app:srcCompat="@drawable/listrowwww" />
+
+        <RelativeLayout
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            android:layout_width="180dp"
+            android:layout_height="70dp">
+            <TextView
+                android:id="@+id/tournamentlistname"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Tournament Name"
+                android:textColor="@color/jaman_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/jaman_color"
+                android:fontFamily="@font/quicksand_medium"
+                android:text="Started From:"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tournamentlistdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:text="12 August,2020"
+                android:textColor="@color/jaman_color"
+                android:textSize="12sp"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/jaman_color"
+                android:layout_marginTop="45dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:text="Winner Prize:"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tournamentlistprize"
+                android:textColor="@color/jaman_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="45dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:text="20000Rs"
+                android:textSize="12sp"></TextView>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="85dp"
+            android:layout_height="70dp">
+
+
+            <Button
+                android:id="@+id/listviewdetailbutton"
+                android:layout_width="85dp"
+                android:layout_height="40dp"
+
+                android:textColor="@color/white"
+                android:background="@drawable/round_button"
+                android:backgroundTint="@color/red_color_almost"
+                android:clickable="true"
+                android:fontFamily="@font/quicksand_semibold"
+                android:textSize="10sp"
+                android:text="View Detail" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
