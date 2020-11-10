@@ -25,68 +25,25 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import Adapters.TournamentListViewAdapter;
+import Adapters.AllOrganizerListViewAdapter;
 import Data.Tournament;
 
-public class TournamentList_Fragment extends Fragment {
+
+public class cataAll extends Fragment {
     private RecyclerView recyclerView;
-    private TournamentListViewAdapter recyclerViewAdapter;
     private List<Tournament> tournamentList;
     private RequestQueue queue;
     LinearLayoutManager manager;
     private final String JSON_URL = "https://gist.githubusercontent.com/aws1994/f583d54e5af8e56173492d3f60dd5ebf/raw/c7796ba51d5a0d37fc756cf0fd14e54434c547bc/anime.json";
     private JsonArrayRequest request;
-    public TournamentListViewAdapter adapter;
-    //private List<Grocery> listItems;
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_tournament_list_, container, false);
-//        recyclerView = view.findViewById(R.id.lrecyler);
-//        recyclerView.setHasFixedSize(true);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-//        initdata();
-//
-//
-//        recyclerViewAdapter = new TournamentListViewAdapter(getContext(), tournamentList);
-//        recyclerView.setAdapter(recyclerViewAdapter);
-//        recyclerViewAdapter.notifyDataSetChanged();
-//        // Inflate the layout for this fragment
-//
-//
-//
-//
-//});
-//
-//    private List<Tournament> initdata() {
-//        tournamentList = new ArrayList<>();
-//
-//        for (Tournament c : tournamentList) {
-//            Tournament tournament = new Tournament();
-//            tournament.setTournamentname(c.getTournamentname());
-//            tournament.setPrice(c.getPrice());
-//            tournament.setImagelist(c.getImagelist());
-//            tournament.setDate(c.getDate());
-//            tournamentList.add(tournament);
-//
-//
-//        }
-//      return tournamentList;
-//    }
-
-        return view;
-    }
-
-
-    @Override
+    public AllOrganizerListViewAdapter adapter;
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         //  getexsistingteams();
 
         // RecyclerView recyclerView = view.findViewById(R.id.exsitingteamRecylerview);
-        recyclerView = view.findViewById(R.id.lrecyler);
+        recyclerView = view.findViewById(R.id.lrecyler5);
         //progressBar=view.findViewById(R.id.progressBar);
         manager = new LinearLayoutManager(getContext());
         tournamentList = new ArrayList<>();
@@ -107,7 +64,7 @@ public class TournamentList_Fragment extends Fragment {
 
                 try {
                     jsonObject = response.getJSONObject(i);
-                   Tournament anime = new Tournament();
+                    Tournament anime = new Tournament();
                     anime.setTitle(jsonObject.getString("name"));
                     //anime.setDescription(jsonObject.getString("description"));
                     anime.setDate(jsonObject.getString("Rating"));
@@ -126,7 +83,7 @@ public class TournamentList_Fragment extends Fragment {
             }
 
 
-            adapter = new TournamentListViewAdapter(getContext(),tournamentList);
+            adapter = new AllOrganizerListViewAdapter(getContext(),tournamentList);
             recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
             recyclerView.setAdapter(adapter);
 
@@ -143,5 +100,12 @@ public class TournamentList_Fragment extends Fragment {
         queue = Volley.newRequestQueue(getContext());
         queue.add(request);
 
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_cata_all, container, false);
     }
 }
