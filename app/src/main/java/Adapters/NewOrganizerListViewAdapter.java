@@ -1,6 +1,7 @@
 package Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,28 +16,29 @@ import com.example.tournament.R;
 
 import java.util.List;
 
+import Act.Organizer_Tournament_Detail;
 import Data.Tournament;
 
-public class TournamentListViewAdapter extends RecyclerView.Adapter<TournamentListViewAdapter.ViewHolder> {
+public class NewOrganizerListViewAdapter extends RecyclerView.Adapter<NewOrganizerListViewAdapter.ViewHolder> {
     private Context context;
     private List<Tournament> Tournamentlist;
   //  private LayoutInflater layoutInflater;
 
 
-    public TournamentListViewAdapter(Context context, List<Tournament> Tournaments)
+    public NewOrganizerListViewAdapter(Context context, List<Tournament> Tournaments)
     {
 
         this.context=context;
         this.Tournamentlist=Tournaments;
     }
-    public TournamentListViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public NewOrganizerListViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
        // View view= layoutInflater.inflate(R.layout.list_row_for_user_dashboard,parent,false);
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.list_row_for_user_dashboard, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TournamentListViewAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull NewOrganizerListViewAdapter.ViewHolder holder, int position) {
 
 
         Tournament tournament = Tournamentlist.get(position);
@@ -95,7 +97,12 @@ public class TournamentListViewAdapter extends RecyclerView.Adapter<TournamentLi
 //                    intent.putExtra("id", grocery.getId());
 //                    intent.putExtra("date", grocery.getDateItemAdded());
 //                    context.startActivity(intent);
-
+                    Intent intent = new Intent(context, Organizer_Tournament_Detail.class);
+//                    intent.putExtra("name", grocery.getName());
+//                    intent.putExtra("quantity", grocery.getQuantity());
+//                    intent.putExtra("id", grocery.getId());
+//                    intent.putExtra("date", grocery.getDateItemAdded());
+                    context.startActivity(intent);
 
                 }
             });

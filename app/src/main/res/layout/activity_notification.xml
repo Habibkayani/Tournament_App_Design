@@ -5,5 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="Act.Notification">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/notificationtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bottom_corner"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:title="OrganizerDashBoard"
+        app:titleMarginStart="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" ></androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lrecyler4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notificationtoolbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

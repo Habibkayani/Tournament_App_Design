@@ -6,8 +6,8 @@
 
 <item
     android:title="notification"
-    android:icon="@drawable/ic_notification"
-    android:id="@+id/notification"
+    android:icon="@drawable/ic_addd"
+    android:id="@+id/adddd"
     app:showAsAction="always"></item>
 
 

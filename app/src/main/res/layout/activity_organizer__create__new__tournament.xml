@@ -4,6 +4,248 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context="Act.Organizer_Create_New_Tournament">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarcreate"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bottom_corner"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:title="Create New Team"
+        app:titleMarginStart="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+    </androidx.appcompat.widget.Toolbar>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/tournamentdetailimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email_field"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/custom_input_field"
+        android:elevation="2dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:hint="Tournament Name"
+        android:inputType="textEmailAddress"
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="44dp"
+        android:paddingRight="44dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/prussianBlue"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:background="@drawable/custom_input_field"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_field">
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:spinnerMode="dialog"
+            android:entries="@array/LIST"
+
+            android:layout_height="match_parent"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+
+    <EditText
+        android:id="@+id/email_field3"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/custom_input_field"
+        android:elevation="2dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:hint="Entry Fee"
+        android:inputType="numberDecimal"
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="44dp"
+        android:paddingRight="44dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/prussianBlue"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card" />
+
+    <EditText
+        android:id="@+id/email_field4"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/custom_input_field"
+        android:elevation="2dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:hint="Winning Fee"
+        android:inputType="numberDecimal"
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="44dp"
+        android:paddingRight="44dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/prussianBlue"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_field3" />
+
+    <EditText
+        android:id="@+id/email_field5"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/custom_input_field"
+        android:elevation="2dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:hint="Started Date"
+        android:inputType="datetime"
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="44dp"
+        android:paddingRight="44dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/prussianBlue"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_field4" />
+    <EditText
+        android:id="@+id/email_field6"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/custom_input_field"
+        android:elevation="2dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:hint="Tournament Description(Optional)"
+        android:inputType="textMultiLine"
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="44dp"
+        android:paddingRight="44dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/prussianBlue"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_field4" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/email_field5"
+        app:layout_constraintTop_toBottomOf="@+id/email_field6"
+        app:srcCompat="@drawable/ic_calenda" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:text="Create New Tournament"
+        android:textColor="@color/jaman_color"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/email_field6" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:srcCompat="@drawable/ic_gallery" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:text="Add Tournament Photos"
+        android:textColor="@color/jaman_color"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <Button
+        android:id="@+id/organizercreatetournamnet"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="@color/red_color_almost"
+        android:fontFamily="@font/quicksand_semibold"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Create Tournament"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

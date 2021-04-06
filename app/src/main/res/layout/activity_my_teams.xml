@@ -4,6 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyTeams">
+    android:layout_gravity="center"
+    android:background="@drawable/background"
+    tools:context="Act.MyTeams">
+
+    <include
+        layout="@layout/my_team_content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <include
+        layout="@layout/my_team_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></include>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

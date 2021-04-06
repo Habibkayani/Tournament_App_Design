@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<TextView
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="?attr/dropdownListPreferredItemHeight"
+    android:ellipsize="marquee"
+    android:textColor="@color/waterloo"
+    android:fontFamily="@font/quicksand_medium"
+    android:textSize="14dp"
+    style="?attr/spinnerDropDownItemStyle"
+    android:singleLine="true"
+    android:background="@drawable/custom_input_field"
+    android:backgroundTint="@color/white"
+    android:id="@+id/text1"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</TextView>

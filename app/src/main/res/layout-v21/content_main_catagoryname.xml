@@ -7,13 +7,13 @@
 
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/organizertoolbar"
+        android:id="@+id/catatoolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@drawable/bottom_corner"
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
-        app:title="OrganizerDashBoard"
-        app:titleMarginStart="40dp"
+        app:title="Catagory Name"
+        app:titleMarginStart="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >

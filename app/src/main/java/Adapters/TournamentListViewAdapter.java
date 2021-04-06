@@ -1,4 +1,4 @@
-package ListAdapters;
+package Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,11 +13,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tournament.R;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import Tournament.Tournament;
+import Act.Tournament_Detials;
+import Data.Tournament;
 
 public class TournamentListViewAdapter extends RecyclerView.Adapter<TournamentListViewAdapter.ViewHolder> {
     private Context context;
@@ -44,12 +44,14 @@ public class TournamentListViewAdapter extends RecyclerView.Adapter<TournamentLi
         Tournament tournament = Tournamentlist.get(position);
 
 
-        Picasso.get()
-                .load(tournament.getImagelist())
-                .into(holder.imageView);
+      //  Picasso.get()
+             //   .load(tournament.getImagelist())
+                //.into(holder.imageView);
         holder.date.setText(tournament.getDate());
-        holder.prize.setText(tournament.getPrice());
-        holder.listname.setText(tournament.getTournamentname());
+        holder.title.setText(tournament.getTitle());
+        holder.prize.setText(String.valueOf(tournament.getPrice()));
+        //holder.listname.setText(tournament.getname());
+        holder.imageView.setImageResource(R.drawable.createteam);
     }
 
     @Override
@@ -63,6 +65,7 @@ public class TournamentListViewAdapter extends RecyclerView.Adapter<TournamentLi
         public TextView date;
         public TextView listname;
         public TextView prize;
+        public TextView title;
         public  Button viewdetail;
 
 
@@ -74,7 +77,7 @@ public class TournamentListViewAdapter extends RecyclerView.Adapter<TournamentLi
            imageView = (ImageView) view.findViewById(R.id.Tournamentimage);
             date = (TextView) view.findViewById(R.id.tournamentlistdate);
             prize = (TextView) view.findViewById(R.id.tournamentlistprize);
-
+           title= (TextView) view.findViewById(R.id.tournamentlistname);
             viewdetail = (Button) view.findViewById(R.id.listviewdetailbutton);
 
 
@@ -85,15 +88,15 @@ public class TournamentListViewAdapter extends RecyclerView.Adapter<TournamentLi
                 @Override
                 public void onClick(View v) {
                     //go to next screen/ DetailsActivity
-//                    int position = getAdapterPosition();
+                  int position = getAdapterPosition();
 //
 //                    Grocery grocery = groceryItems.get(position);
-//                    Intent intent = new Intent(context, DetailsActivity.class);
+                  Intent intent = new Intent(context, Tournament_Detials.class);
 //                    intent.putExtra("name", grocery.getName());
 //                    intent.putExtra("quantity", grocery.getQuantity());
 //                    intent.putExtra("id", grocery.getId());
 //                    intent.putExtra("date", grocery.getDateItemAdded());
-//                    context.startActivity(intent);
+           context.startActivity(intent);
 
 
                 }

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<TextView
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="?attr/dropdownListPreferredItemHeight"
+    android:ellipsize="marquee"
+    android:textColor="@color/red_color_almost"
+    android:fontFamily="@font/quicksand_medium"
+    android:textSize="14dp"
+    style="@style/mySpinnerItemStyle"
+    android:singleLine="true"
+    android:background="@color/white"
+    android:layout_marginTop="5dp"
+    android:textAlignment="center"
+    android:id="@+id/text1"
+    android:gravity="center_horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</TextView>

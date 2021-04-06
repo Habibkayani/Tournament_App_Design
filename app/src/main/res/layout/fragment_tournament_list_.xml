@@ -7,7 +7,7 @@
     android:background="@drawable/background"
 
 
-    tools:context="Act.TournamentList_Fragment">
+    tools:context="Fragments.TournamentList_Fragment">
 
 
     <androidx.recyclerview.widget.RecyclerView

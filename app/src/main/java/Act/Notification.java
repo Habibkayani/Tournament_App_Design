@@ -1,8 +1,10 @@
 package Act;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+import com.example.tournament.R;
 
 public class Notification extends AppCompatActivity {
 

@@ -3,12 +3,134 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".My_Team_create_new_account_fragment">
+    xmlns:ndroid="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context="Fragments.My_Team_create_new_account_fragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/createteam"
+        android:layout_marginLeft="140dp"
+        />
+    <EditText
+        android:id="@+id/TeamName"
+        android:layout_width="320dp"
+        android:hint="Team Name"
+        android:textSize="14dp"
+
+   android:paddingLeft="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="50dp"
+      android:layout_marginTop="140dp"
+        android:background="@drawable/custom_input_field"
+        android:elevation="2dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:inputType="textPersonName"
+
+        android:textColor="@color/prussianBlue"></EditText>
+    <EditText
+        android:id="@+id/Description"
+        android:layout_width="320dp"
+        android:hint="Add description about team"
+        android:textSize="14dp"
+        android:layout_marginLeft="20dp"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/custom_input_field"
+        android:elevation="2dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:inputType="textMultiLine"
+
+        android:textColor="@color/prussianBlue"
+        />
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:text="Team Members"
+        android:textColor="@color/red_color_almost"
+        android:fontFamily="@font/quicksand_bold"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        >
+    </TextView>
+    <FrameLayout
+
+
+        android:id="@+id/frameLayout6"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="20dp"
+>
+
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/aa" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="50dp"
+            android:visibility="invisible"
+            android:layout_height="50dp"
+            android:layout_marginLeft="65dp"
+            android:src="@drawable/a" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="125dp"
+            android:visibility="invisible"
+            android:src="@drawable/b" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="185dp"
+           android:visibility="invisible"
+            android:src="@drawable/c" />
+
+        <Button
+            android:id="@+id/addteam"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:textColor="@color/white"
+            android:text="ADD"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_marginLeft="265dp"
+            android:background="@drawable/round_button"
+            android:backgroundTint="@color/red_color_almost"/>
+
+
+
+    </FrameLayout>
+    <Button
+        android:id="@+id/createteambtn"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="@color/red_color_almost"
+        android:fontFamily="@font/lato_regular"
+        android:text="Create Team"
+
+        android:textColor="@color/white"
+/>
+
 
 </FrameLayout>

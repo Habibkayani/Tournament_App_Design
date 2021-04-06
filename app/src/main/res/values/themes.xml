@@ -32,5 +32,9 @@
     <style name="Theme.TOURNAMENT.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.TOURNAMENT.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/jaman_color</item>
+    </style>
 
 </resources>

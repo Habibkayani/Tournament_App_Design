@@ -107,5 +107,11 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_tournament__detail">Tournament_Detail</string>
+    <string-array name="LIST">
+        <item>Choose Catagories</item>
+        <item>Cricket</item>
+        <item>Football</item>
+        <item>Hockey</item>
+    </string-array>
 
 </resources>

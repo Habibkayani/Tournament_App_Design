@@ -14,7 +14,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="Act.Tournament_Catagories_Fragment"
+        tools:context="Fragments.Tournament_Catagories_Fragment"
         android:orientation="vertical"
     android:background="@drawable/background"
         >
@@ -46,6 +46,8 @@
                         app:cardCornerRadius="10dp"
                         >
                         <LinearLayout
+
+                            android:id="@+id/linearlayout1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
@@ -89,6 +91,7 @@
                         app:cardCornerRadius="10dp"
                         >
                         <LinearLayout
+                            android:id="@+id/linearlayout2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
@@ -132,6 +135,7 @@
                         app:cardCornerRadius="10dp"
                         >
                         <LinearLayout
+                            android:id="@+id/linearlayout3"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
@@ -175,6 +179,7 @@
                         app:cardCornerRadius="10dp"
                         >
                         <LinearLayout
+                            android:id="@+id/linearlayout4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
@@ -218,6 +223,7 @@
                         app:cardCornerRadius="10dp"
                         >
                         <LinearLayout
+                            android:id="@+id/linearlayout5"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
@@ -261,6 +267,7 @@
                         app:cardCornerRadius="10dp"
                         >
                         <LinearLayout
+                            android:id="@+id/linearlayout6"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
@@ -304,6 +311,7 @@
                         app:cardCornerRadius="10dp"
                         >
                         <LinearLayout
+                            android:id="@+id/linearlayout7"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"

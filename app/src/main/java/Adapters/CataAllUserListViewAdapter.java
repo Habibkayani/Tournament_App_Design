@@ -19,26 +19,26 @@ import java.util.List;
 import Act.Tournament_Detials;
 import Data.Tournament;
 
-public class CataAllOrganizerListViewAdapter extends RecyclerView.Adapter<CataAllOrganizerListViewAdapter.ViewHolder> {
+public class CataAllUserListViewAdapter extends RecyclerView.Adapter<CataAllUserListViewAdapter.ViewHolder> {
     private Context context;
     private List<Tournament> Tournamentlist;
   //  private LayoutInflater layoutInflater;
 
 
-    public CataAllOrganizerListViewAdapter(Context context, List<Tournament> Tournaments)
+    public CataAllUserListViewAdapter(Context context, List<Tournament> Tournaments)
     {
 
         this.context=context;
         this.Tournamentlist=Tournaments;
     }
-    public CataAllOrganizerListViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CataAllUserListViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
        // View view= layoutInflater.inflate(R.layout.list_row_for_user_dashboard,parent,false);
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.list_row_for_user_dashboard, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CataAllOrganizerListViewAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CataAllUserListViewAdapter.ViewHolder holder, int position) {
 
 
         Tournament tournament = Tournamentlist.get(position);

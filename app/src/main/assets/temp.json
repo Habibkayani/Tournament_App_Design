@@ -1,22 +1,22 @@
 [
   {
     "title": "Urgentina",
-    "members": 6,
-    "rating": 4.5,
+    "members": "six",
+    "rating": "four.five",
     "id": "ajerihr843hrasd8433593940",
     "img-url": "D://img.png"
   },
   {
     "title": "Pakistan",
-    "members": 10,
-    "rating": 4.2,
+    "members": "ten",
+    "rating": "four.two",
     "id": "ajerihr843hr8433593940",
     "img-url": "D://img.png"
   },
   {
     "title": "Germany",
-    "members": 4.8,
-    "rating": 4.9,
+    "members": "four",
+    "rating": "four.nine",
     "id": "ajerihr84329874982hr8433593940",
     "img-url": "D://img.png"
   }

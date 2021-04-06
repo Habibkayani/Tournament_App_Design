@@ -1,36 +1,32 @@
-package Tournament;
+package Data;
 
 public class Tournament {
 
 
-    private String tournamentname;
+    private String name;
     private String date;
     private int price;
-    private int imagelist;
+    private String title;
 
-    public int getImagelist() {
-        return imagelist;
-    }
-
-    public void setImagelist(int imagelist) {
-        this.imagelist = imagelist;
-    }
+    private String imagelist;
 
     public Tournament() {
     }
 
-    public Tournament(String tournamentname, String date,int price) {
-        this.tournamentname = tournamentname;
+    public Tournament(String name, String date, int price, String title, String imagelist) {
+        this.name = name;
         this.date = date;
         this.price = price;
+        this.title = title;
+        this.imagelist = imagelist;
     }
 
-    public String getTournamentname() {
-        return tournamentname;
+    public String getName() {
+        return name;
     }
 
-    public void setTournamentname(String tournamentname) {
-        this.tournamentname = tournamentname;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDate() {
@@ -47,5 +43,21 @@ public class Tournament {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getImagelist() {
+        return imagelist;
+    }
+
+    public void setImagelist(String imagelist) {
+        this.imagelist = imagelist;
     }
 }

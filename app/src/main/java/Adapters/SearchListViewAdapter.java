@@ -1,11 +1,9 @@
 package Adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,29 +14,28 @@ import com.example.tournament.R;
 
 import java.util.List;
 
-import Act.Tournament_Detials;
 import Data.Tournament;
 
-public class AllOrganizerListViewAdapter extends RecyclerView.Adapter<AllOrganizerListViewAdapter.ViewHolder> {
+public class SearchListViewAdapter extends RecyclerView.Adapter<SearchListViewAdapter.ViewHolder> {
     private Context context;
     private List<Tournament> Tournamentlist;
   //  private LayoutInflater layoutInflater;
 
 
-    public AllOrganizerListViewAdapter(Context context, List<Tournament> Tournaments)
+    public SearchListViewAdapter(Context context, List<Tournament> Tournaments)
     {
 
         this.context=context;
         this.Tournamentlist=Tournaments;
     }
-    public AllOrganizerListViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public SearchListViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
        // View view= layoutInflater.inflate(R.layout.list_row_for_user_dashboard,parent,false);
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.list_row_for_user_dashboard, parent, false);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.search_list_row, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AllOrganizerListViewAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SearchListViewAdapter.ViewHolder holder, int position) {
 
 
         Tournament tournament = Tournamentlist.get(position);
@@ -63,10 +60,10 @@ public class AllOrganizerListViewAdapter extends RecyclerView.Adapter<AllOrganiz
 
         public ImageView imageView;
         public TextView date;
-        public TextView listname;
+
         public TextView prize;
         public TextView title;
-        public  Button viewdetail;
+
 
 
         public ViewHolder(View view) {
@@ -74,38 +71,15 @@ public class AllOrganizerListViewAdapter extends RecyclerView.Adapter<AllOrganiz
 
 
 
-           imageView = (ImageView) view.findViewById(R.id.Tournamentimage);
-            date = (TextView) view.findViewById(R.id.tournamentlistdate);
-            prize = (TextView) view.findViewById(R.id.tournamentlistprize);
-           title= (TextView) view.findViewById(R.id.tournamentlistname);
-            viewdetail = (Button) view.findViewById(R.id.listviewdetailbutton);
+           imageView = (ImageView) view.findViewById(R.id.searchimage);
+            date = (TextView) view.findViewById(R.id.searchratingrating);
+            prize = (TextView) view.findViewById(R.id.searchmember);
+           title= (TextView) view.findViewById(R.id.searchtitle);
 
 
-          viewdetail.setOnClickListener(this);
 
 
-            viewdetail.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //go to next screen/ DetailsActivity
-//                    int position = getAdapterPosition();
-//
-//                    Grocery grocery = groceryItems.get(position);
-//                    Intent intent = new Intent(context, DetailsActivity.class);
-//                    intent.putExtra("name", grocery.getName());
-//                    intent.putExtra("quantity", grocery.getQuantity());
-//                    intent.putExtra("id", grocery.getId());
-//                    intent.putExtra("date", grocery.getDateItemAdded());
-//                    context.startActivity(intent);
-                    Intent intent = new Intent(context, Tournament_Detials.class);
-//                    intent.putExtra("name", grocery.getName());
-//                    intent.putExtra("quantity", grocery.getQuantity());
-//                    intent.putExtra("id", grocery.getId());
-//                    intent.putExtra("date", grocery.getDateItemAdded());
-                    context.startActivity(intent);
 
-                }
-            });
         }
 
         @Override

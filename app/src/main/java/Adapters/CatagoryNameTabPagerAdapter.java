@@ -5,13 +5,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import Fragments.TournamentList_Fragment;
-import Fragments.Tournament_Catagories_Fragment;
+import Fragments.CataNew;
+import Fragments.cataAll;
 
-public class NaviagtionandTabPagerAdapter extends FragmentPagerAdapter {
+public class CatagoryNameTabPagerAdapter extends FragmentPagerAdapter {
     private int tabsNumber;
 
-    public NaviagtionandTabPagerAdapter(@NonNull FragmentManager fm, int behavior, int tabs) {
+    public CatagoryNameTabPagerAdapter(@NonNull FragmentManager fm, int behavior, int tabs) {
         super(fm, behavior);
         this.tabsNumber = tabs;
     }
@@ -21,9 +21,9 @@ public class NaviagtionandTabPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                return new TournamentList_Fragment();
+                return new cataAll();
             case 1:
-                return new Tournament_Catagories_Fragment();
+                return new CataNew();
 
             default: return null;
         }

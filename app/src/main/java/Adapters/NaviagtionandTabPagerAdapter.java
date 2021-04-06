@@ -1,9 +1,12 @@
-package Act;
+package Adapters;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+import Fragments.TournamentList_Fragment;
+import Fragments.Tournament_Catagories_Fragment;
 
 public class NaviagtionandTabPagerAdapter extends FragmentPagerAdapter {
     private int tabsNumber;
